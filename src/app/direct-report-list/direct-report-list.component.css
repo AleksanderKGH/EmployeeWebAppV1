@@ -1,0 +1,24 @@
+.direct-report-header {
+  background-color: gray;
+  color: white;
+  padding: 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+mat-card-content {
+  background-color: whitesmoke;
+  padding: 16px;
+}
+
+.card-content:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.card-content-element {
+  padding: 10px;
+}
+.direct-report-card.mat-card {
+  padding: 0px;
+  box-shadow: none;
+  border-radius: 10px;
+}

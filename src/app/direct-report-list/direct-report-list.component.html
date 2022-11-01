@@ -1,0 +1,16 @@
+<mat-card class="direct-report-card">
+  <mat-card-header class="direct-report-header">
+    <div style="position: relative; left: -22px; font-weight: bold;">Direct Reports:</div>
+  </mat-card-header>
+  <mat-card-content class="card-content">
+    <div *ngIf="dirReps != undefined; then reps; else none"></div>
+    <ng-template #reps>
+      <div class="card-content-element" *ngFor="let dirRep of dirReps">
+        <app-direct-report [rep]="dirRep"></app-direct-report>
+      </div>
+    </ng-template>
+    <ng-template #none>
+      <div class="card-content-element">This employee has no reports</div>
+    </ng-template>
+  </mat-card-content>
+</mat-card>

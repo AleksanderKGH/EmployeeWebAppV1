@@ -1,5 +1,13 @@
-<mat-grid-list class="employee-list" cols="4">
-  <mat-grid-tile *ngFor="let emp of employees">
-    <app-employee [employee]="emp"></app-employee>
-  </mat-grid-tile>
-</mat-grid-list>
+<div fxLayout="column" fxLayoutAlign="center stretch">
+    <div class="employee" *ngFor="let emp of employees">
+      <app-employee [employee]="emp"></app-employee>
+    </div>
+</div>
+
+<!--
+  <mat-grid-list fxLayout="column" fxLayoutGap="32px" class="employee-list" cols="1">
+    <mat-grid-tile *ngFor="let emp of employees">
+      <app-employee [employee]="emp"></app-employee>
+    </mat-grid-tile>
+  </mat-grid-list>  
+-->

@@ -1,0 +1,18 @@
+
+
+<ng-container *ngIf="employee != undefined">
+    <div class="direct-report-item">
+        <div class="info">
+            <mat-icon style="color: #0165ba">person</mat-icon> 
+            <div class="emp-info"> {{employee.firstName}} {{employee.lastName}}, {{employee.position}}</div>
+        </div>
+        <div class="icons">
+            <button (click)="openEditMenu()" mat-icon-button>
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button (click)="openDeleteMenu()" mat-icon-button>
+                <mat-icon style="color: red">delete</mat-icon>
+            </button>
+        </div>
+    </div>
+</ng-container>

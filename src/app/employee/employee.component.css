@@ -1,0 +1,22 @@
+.employee{
+    border: 2px solid;
+    border-color: #0165ba;
+}
+
+.employee-name{
+    color: #0165ba;
+    padding-bottom: 10px;
+    position: relative;
+    left: -16px
+}
+
+.employee-subtitle{
+    color: black;
+    padding-bottom: 6px;
+    position: relative;
+    left: -16px
+}
+
+mat-card-content{
+    padding-top: 20px;
+}

@@ -1,0 +1,23 @@
+.direct-report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.icons {
+  float: right;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info:first-child {
+  gap: 20px;
+}
+
+.emp-info {
+  font-weight: 100px;
+}
