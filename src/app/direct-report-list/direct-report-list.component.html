@@ -6,11 +6,11 @@
     <div *ngIf="dirReps != undefined; then reps; else none"></div>
     <ng-template #reps>
       <div class="card-content-element" *ngFor="let dirRep of dirReps">
-        <app-direct-report [rep]="dirRep"></app-direct-report>
+        <app-direct-report [rep]="dirRep" (onDeleteRep)="deleteRep(rep)"></app-direct-report>
       </div>
     </ng-template>
     <ng-template #none>
-      <div class="card-content-element">This employee has no reports</div>
+      <div class="card-content-element no-reports"> <mat-icon style="color: red">block</mat-icon>This employee has no reports</div>
     </ng-template>
   </mat-card-content>
 </mat-card>

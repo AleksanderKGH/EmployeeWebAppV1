@@ -22,3 +22,9 @@ mat-card-content {
   box-shadow: none;
   border-radius: 10px;
 }
+.no-reports {
+  font-size: 20px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 import { MatDialog } from "@angular/material/dialog";
 
@@ -12,6 +12,8 @@ import { Employee } from "../employee";
 })
 export class DirectReportComponent implements OnInit {
   @Input() rep: number;
+  @Output() onDeleteRep: EventEmitter<number> = new EventEmitter();
+
   employee: Employee;
   errorMessage: string;
 
@@ -25,10 +27,6 @@ export class DirectReportComponent implements OnInit {
     const editRef = this.editMenu.open(editMenuContent);
     console.log("Edit");
   }
-  openDeleteMenu(): void {
-    const deleteRef = this.deleteMenu.open(deleteMenuContent);
-    console.log("Delete");
-  }
 
   // Need to call service here to fill an employee, then we can safely display their data
   ngOnInit(): void {
@@ -40,8 +38,13 @@ export class DirectReportComponent implements OnInit {
           lastName: emp.lastName,
           position: emp.position,
           compensation: emp.compensation,
-        })
+      })
     );
+  }
+
+  onDelete(rep: number) {
+    console.log(`Emitting ${rep}`)
+    this.onDeleteRep.emit(rep);
   }
 
 }
@@ -51,9 +54,3 @@ export class DirectReportComponent implements OnInit {
   templateUrl: 'edit-menu.html',
 })
 export class editMenuContent { }
-
-@Component({
-  selector: 'delete-menu',
-  templateUrl: 'delete-menu.html',
-})
-export class deleteMenuContent {}
